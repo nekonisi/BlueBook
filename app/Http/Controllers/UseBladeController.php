@@ -14,17 +14,25 @@ class UseBladeController extends Controller
 	}
 
 	public function form() {
-		$data = [
-			'msg' => '名前を入力！',
-			];
-		return view('Blade.form', $data);
+		return view('Blade.form');
 	}
 
 	public function post(Request $request) {
 		$msg = $request->msg;
 		$data = [
-			'msg'=>'こんにちは、' . $msg . 'さん！',
+			'msg'=>$msg,
 			];
 		return view('Blade.form', $data);
+	}
+
+	public function forSentence() {
+		$array = [
+		'one',
+		'two',
+		'three',
+		'four',
+		'five'
+		];
+		return view('Blade.forSentence', ['data'=>$array]);
 	}
 }

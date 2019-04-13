@@ -144,3 +144,12 @@ Route::get('sample3_9', 'UseBladeController@index');
 // sample3_15: フォームの作成
 Route::get('sample3_15', 'UseBladeController@form');
 Route::post('sample3_15', 'UseBladeController@post');
+
+// sample3_22: for文の使用
+Route::get('sample3_22', 'UseBladeController@forSentence');
+
+// sample3_27: layoutの使用
+Route::get('sample3_27', function() {
+	 return view('Blade.useLayout'); 
+	 }
+);
