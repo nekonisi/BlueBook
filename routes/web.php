@@ -63,45 +63,45 @@ Route::get('sample2_4',function()
 
 Route::get('sample2_5_1/{msg}',function($msg){
 		$html = <<<EOF
-		<html>
-		<head>
-		<title>Hello</title>
-		<style>
-		body {font-size:16pt; color:#999;}
-		h1 {font-size:100pt; text-align:right; color:#eee; margin: -40px 0px -50px 0px;}
-		</style>
-		</head>
-		<body>
-		<h1> Hello </h1>
-		<p>{$msg}</p>
-		<p> これはサンプルで作ったページです。 </p>
-		</body>
-		</html>
-		EOF;
+<html>
+<head>
+<title>Hello</title>
+<style>
+body {font-size:16pt; color:#999;}
+h1 {font-size:100pt; text-align:right; color:#eee; margin: -40px 0px -50px 0px;}
+</style>
+</head>
+<body>
+<h1> Hello </h1>
+<p>{$msg}</p>
+<p> これはサンプルで作ったページです。 </p>
+</body>
+</html>
+EOF;
 
 		return $html;
 		}
-	  );
+		);
 
 // sample2_5_2: 任意パラメータを利用したサンプル
 
-Route::get('hello2_5_2/{msg?}',function($msg = 'no message.'){
+Route::get('sample2_5_2/{msg?}',function($msg = 'no message.'){
 		$html = <<<EOF
-		<html>
-			<head>
-				<title>Hello</title>
-				<style>
-					body {font-size:16pt; color:#999;}
-					h1 {font-size:100pt; text-align:right; color:#eee; margin: -40px 0px -50px 0px;}
-				</style>
-			</head>
-			<body>
-				<h1> Hello </h1>
-				<p>{$msg}</p>
-				<p> これはサンプルで作ったページです。 </p>
-			</body>
-		</html>
-		EOF;
+<html>
+<head>
+<title>Hello</title>
+<style>
+body {font-size:16pt; color:#999;}
+h1 {font-size:100pt; text-align:right; color:#eee; margin: -40px 0px -50px 0px;}
+</style>
+</head>
+<body>
+<h1> Hello </h1>
+<p>{$msg}</p>
+<p> これはサンプルで作ったページです。 </p>
+</body>
+</html>
+EOF;
 		return $html;
 		}
 );
@@ -153,3 +153,4 @@ Route::get('sample3_27', function() {
 	 return view('Blade.useLayout'); 
 	 }
 );
+
