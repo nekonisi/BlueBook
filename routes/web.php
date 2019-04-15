@@ -150,7 +150,12 @@ Route::get('sample3_22', 'UseBladeController@forSentence');
 
 // sample3_27: layoutの使用
 Route::get('sample3_27', function() {
-	 return view('Blade.useLayout'); 
+	$data = [
+	['name'=>'山田太郎', 'mail'=>'taro@yamada'],
+	['name'=>'田中花子', 'mail'=>'hanako@tanaka'],
+	['name'=>'鈴木次郎', 'mail'=>'jiro@suzuki'],
+	];
+	 return view('Blade.useLayout', ['data'=>$data]); 
 	 }
 );
 
