@@ -159,3 +159,6 @@ Route::get('sample3_27', function() {
 	 }
 );
 
+// sample3-38: View Composerの使用
+Route::get('sample3_38', 'ViewComposerController@index');
+
