@@ -164,8 +164,16 @@ Route::get('sample3_27', function() {
 // sample3-38: View Composerの使用
 Route::get('sample3_38', 'ViewComposerController@index');
 
+/******************************
+chapter4: リクエスト・レスポンスを補完する
+******************************/
+
 // sample4-3: ミドルウェアの実行
 Route::get('sample4_3', 'HelloController@useMiddleware')->middleware('hello');
 
 // sample4-6: ミドルウェアの実行(表示前操作)
 Route::get('sample4_6', 'HelloController@useAfterMiddleware');
+
+// sample4-16: バリデーションチェックの実装
+Route::get('sample4_16', 'ValidationController@index');
+Route::post('sample4_16', 'ValidationController@post');
