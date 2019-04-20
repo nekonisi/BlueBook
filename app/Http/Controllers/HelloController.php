@@ -22,6 +22,10 @@ class HelloController extends Controller
 					<p>これは、Helloコントローラのindexアクションです。</p>
 				</body>
 			</html>
-			EOF;
+EOF;
+	}
+
+	public function useMiddleware(Request $request){
+		return view('Middleware.index', ['data'=>$request->data]);
 	}
 }
