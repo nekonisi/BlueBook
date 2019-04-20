@@ -28,4 +28,8 @@ EOF;
 	public function useMiddleware(Request $request){
 		return view('Middleware.index', ['data'=>$request->data]);
 	}
+
+	public function useAfterMiddleware(Request $request){
+		return view('Middleware.AfterMiddleware');
+	}
 }

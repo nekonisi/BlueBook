@@ -18,11 +18,11 @@ class AfterMiddleware
 		$response = $next($request);
 		$content = $response->content();
 
-		$pattern = '^<middleware>(.*)<\/middleware>\i';
+		$pattern = '/<hoge>(.*)<\/hoge>/i';
 		$replace = '<a href="http://$1">$1</a>';
 		$content = preg_replace($pattern, $replace, $content);
 
 		$response->setContent($content);
-        return $next($request);
+		return $response;
     }
 }

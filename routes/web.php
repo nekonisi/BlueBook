@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\HelloMiddleware;
+use App\Http\Middleware\AfterMiddleware;
 /*
    |--------------------------------------------------------------------------
    | Web Routes
@@ -165,3 +166,6 @@ Route::get('sample3_38', 'ViewComposerController@index');
 
 // sample4-3: ミドルウェアの実行
 Route::get('sample4_3', 'HelloController@useMiddleware')->middleware(HelloMiddleware::class);
+
+// sample4-6: ミドルウェアの実行(表示前操作)
+Route::get('sample4_6', 'HelloController@useAfterMiddleware');
