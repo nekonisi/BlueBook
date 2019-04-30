@@ -177,3 +177,15 @@ Route::get('sample4_6', 'HelloController@useAfterMiddleware');
 // sample4-16: バリデーションチェックの実装
 Route::get('sample4_16', 'ValidationController@index');
 Route::post('sample4_16', 'ValidationController@post');
+
+// sample4-17: メッセージの表示
+Route::get('sample4_17', 'ValidationController@index2');
+Route::post('sample4_17', 'ValidationController@post2');
+
+Route::get('sample4_18', 'ValidationController@index3');
+Route::post('sample4_18', 'ValidationController@post3');
+
+// sample4-21: リクエストの作成
+
+Route::get('sample4_21', 'RequestController@index');
+Route::post('sample4_21', 'RequestController@post');
